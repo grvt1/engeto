@@ -6,21 +6,19 @@ slevy = ("Olomouc", "Svitavy", "Ostrava")
 ceny = (150, 200, 120, 120, 100, 180)
 dvojita_cara = "=" * 35
 cara = "-" * 35
-nabidka = """
-1 - Praha   | 150
-2 - Viden   | 200
-3 - Olomouc | 120
-4 - Svitavy | 120
-5 - Zlin    | 100
-6 - Ostrava | 180
-"""
-today = str(datetime.date.today())
-AKT_ROK = today.split('-')[0]
+
+AKT_ROK = str(datetime.date.today()).split('-')[0]
 
 # Privitani
 print('VITEJTE U NASI APLIKACE DESTINATIO!')
 print(dvojita_cara)
-print(nabidka)
+
+# vytiskni na obrazovku zarovnana mesta
+nejdelsi_nazev = len(max(mesta, key=len))
+for i in mesta:
+    pocet_mezer_za_mestem =  ' '*(nejdelsi_nazev - len(i))
+    print(f'{mesta.index(i) + 1} - {i}{pocet_mezer_za_mestem} | {ceny[mesta.index(i)]}')
+
 print(dvojita_cara)
 
 # Vyber destinace + kontrola jestli je vyber spravny (quit pokud neni)
