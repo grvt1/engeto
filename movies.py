@@ -1,62 +1,75 @@
-from pprint import pprint
+import datetime
 
 oddelovac = "=" * 62
 
 sluzby = ("dostupne filmy", "detaily filmu", 'reziseri', "doporuc film")
 
-uzivatele = {
-    "tomas": {"Shawshank Redemption", "The Godfather", "The Dark Knight"},
-    "petr": {"The Godfather", "The Dark Knight"},
-    "marek": {"The Dark Knight", "The Prestige"}
-}
+uzivatele = \
+    {
+        "tomas": {"Shawshank Redemption", "The Godfather", "The Dark Knight"},
+        "petr": {"The Godfather", "The Dark Knight"},
+        "marek": {"The Dark Knight", "The Prestige"}
+    }
 
-film_1 = {
-    "JMENO": "Shawshank Redemption",
-    "HODNOCENI": "93/100",
-    "ROK": 1994,
-    "REZISER": "Frank Darabont",
-    "STOPAZ": 144,
-    "HRAJI": ("Tim Robbins", "Morgan Freeman", "Bob Gunton", "William Sadler",
-      "Clancy Brown", "Gil Bellows", "Mark Rolston", "James Whitmore",
-      "Jeffrey DeMunn", "Larry Brandenburg"
-     )
-}
+film_1 = \
+    {
+        "JMENO": "Shawshank Redemption",
+        "HODNOCENI": "93/100",
+        "ROK": 1994,
+        "REZISER": "Frank Darabont",
+        "STOPAZ": 144,
+        "HRAJI":
+            (
+                "Tim Robbins", "Morgan Freeman", "Bob Gunton", "William Sadler",
+                "Clancy Brown", "Gil Bellows", "Mark Rolston", "James Whitmore",
+                "Jeffrey DeMunn", "Larry Brandenburg"
+            )
+    }
 
-film_2 = {
-    "JMENO": "The Godfather",
-    "HODNOCENI": "92/100",
-    "ROK": 1972,
-    "REZISER": "Francis Ford Coppola",
-    "STOPAZ": 175,
-    "HRAJI": ("Marlon Brando", "Al Pacino", "James Caan",
-      "Richard S. Castellano", "Robert Duvall", "Sterling Hayden",
-      "John Marley", "Richard Conte"
-    )
-}
+film_2 = \
+    {
+        "JMENO": "The Godfather",
+        "HODNOCENI": "92/100",
+        "ROK": 1972,
+        "REZISER": "Francis Ford Coppola",
+        "STOPAZ": 175,
+        "HRAJI":
+            (
+                "Marlon Brando", "Al Pacino", "James Caan",
+                "Richard S. Castellano", "Robert Duvall", "Sterling Hayden",
+                "John Marley", "Richard Conte"
+            )
+    }
 
-film_3 = {
-    "JMENO": "The Dark Knight",
-    "HODNOCENI": "90/100",
-    "ROK": 2008,
-    "REZISER": "Christopher Nolan",
-    "STOPAZ": 152,
-    "HRAJI": ("Christian Bale", "Heath Ledger", "Aaron Eckhart",
-      "Michael Caine", "Maggie Gyllenhaal", "Gary Oldman", "Morgan Freeman",
-      "Monique Gabriela", "Ron Dean", "Cillian Murphy"
-    )
-}
+film_3 = \
+    {
+        "JMENO": "The Dark Knight",
+        "HODNOCENI": "90/100",
+        "ROK": 2008,
+        "REZISER": "Christopher Nolan",
+        "STOPAZ": 152,
+        "HRAJI":
+            (
+                "Christian Bale", "Heath Ledger", "Aaron Eckhart",
+                "Michael Caine", "Maggie Gyllenhaal", "Gary Oldman", "Morgan Freeman",
+                "Monique Gabriela", "Ron Dean", "Cillian Murphy"
+            )
+    }
 
-film_4 = {
-    "JMENO": "The Prestige",
-    "HODNOCENI": "85/100",
-    "ROK": 2006,
-    "REZISER": "Christopher Nolan",
-    "STOPAZ": 130,
-    "HRAJI": ("Hugh Jackman", "Christian Bale", "Michael Caine",
-      "Piper Perabo", "Rebecca Hall", "Scarlett Johansson", "Samantha Mahurin",
-      "David Bowie"
-    )
-}
+film_4 = \
+    {
+        "JMENO": "The Prestige",
+        "HODNOCENI": "85/100",
+        "ROK": 2006,
+        "REZISER": "Christopher Nolan",
+        "STOPAZ": 130,
+        "HRAJI":
+            (
+                "Hugh Jackman", "Christian Bale", "Michael Caine",
+                "Piper Perabo", "Rebecca Hall", "Scarlett Johansson", "Samantha Mahurin",
+                "David Bowie"
+            )
+    }
 
 
 # check name and quit if there is no match
@@ -80,6 +93,7 @@ def check_name():
         choose_a_service = input('Vyber sluzbu: ')
         check_choice(choose_a_service)
 
+
 # check choice and quit if there is no match, otherwise execute the choice
 def check_choice(choice):
     if choice not in sluzby:
@@ -101,16 +115,18 @@ def check_choice(choice):
     elif choice == 'doporuc film':
         recommend_a_movie()
 
+
 # print available movies
 def show_movies_available():
-        movies_available_list = list(filmy.keys())
-        movies_available = ''
-        for i in movies_available_list:
-            movies_available += i
-            if movies_available_list.index(i) < len(movies_available_list) - 1:
-                movies_available += ', '
+    movies_available_list = list(filmy.keys())
+    movies_available = ''
+    for i in movies_available_list:
+        movies_available += i
+        if movies_available_list.index(i) < len(movies_available_list) - 1:
+            movies_available += ', '
 
-        print(f'DOSTUPNE FILMY: {movies_available}')
+    print(f'DOSTUPNE FILMY: {movies_available}')
+
 
 # ask user to choose a movie
 def choose_a_movie():
@@ -122,12 +138,14 @@ def choose_a_movie():
 
     return chosen_movie
 
+
 # check if movie is available
 def check_if_movie_exists(chosen_movie):
     if chosen_movie not in filmy:
         print('Takovy film neni ve slovniku')
         print(oddelovac)
         quit()
+
 
 # show details of the chosen movie
 def show_movie_details(chosen_movie):
@@ -144,6 +162,7 @@ def show_movie_details(chosen_movie):
 
     print(oddelovac)
 
+
 # show all movie directors available
 def show_movie_directors():
     print(oddelovac)
@@ -156,10 +175,11 @@ def show_movie_directors():
     directors = directors[:-2]
     print(f'Reziseri: {directors}')
 
-# send an email with recommendtion to a friend
+
+# send an email with recommendation to a friend
 def recommend_a_movie():
     print(oddelovac)
-    recommendting_to = input('Jmeno kamarada/ky: ')
+    recommending_to = input('Jmeno kamarada/ky: ')
     send_to = input('E-mail kamarada/ky: ')
     check_email_domain = '.' not in send_to.split('@')[1] if '@' in send_to else True
     while '@' not in send_to or check_email_domain:
@@ -180,7 +200,7 @@ def recommend_a_movie():
     print(oddelovac)
 
     # send movie details to a friend
-    print(f'Ahoj {recommendting_to.capitalize()}!,')
+    print(f'Ahoj {recommending_to.capitalize()}!,')
 
     # convert first X actors to a string then print hodnoceni and reziser
     pick_actors = ''
@@ -213,7 +233,7 @@ def recommend_a_movie():
         else:
             let = 'rok'
 
-        print(f'Film je jenom {how_old_is_the_movie} let stary (premiera byla v roce {movie_premiere_year}),'
+        print(f'Film je jenom {how_old_is_the_movie} {let} stary (premiera byla v roce {movie_premiere_year}),'
               f'a tech {movie_length} minut stalo urcite za to!')
 
     # printing farewell
@@ -221,16 +241,15 @@ def recommend_a_movie():
     print(f'\nS pozdravem,\n\n', logged_in_user.capitalize().center(len(oddelovac)))
     print(oddelovac)
 
+
 filmy = \
     {
-        film_1['JMENO'] : film_1,
-        film_2['JMENO'] : film_2,
-        film_3['JMENO'] : film_3,
-        film_4['JMENO'] : film_4
+        film_1['JMENO']: film_1,
+        film_2['JMENO']: film_2,
+        film_3['JMENO']: film_3,
+        film_4['JMENO']: film_4
     }
 
 # start program by calling a function to check if name is correct
 logged_in_user = ''
 check_name()
-
-test = datetime

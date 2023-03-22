@@ -16,7 +16,7 @@ print(dvojita_cara)
 # vytiskni na obrazovku zarovnana mesta
 nejdelsi_nazev = len(max(mesta, key=len))
 for i in mesta:
-    pocet_mezer_za_mestem =  ' '*(nejdelsi_nazev - len(i))
+    pocet_mezer_za_mestem = ' '*(nejdelsi_nazev - len(i))
     print(f'{mesta.index(i) + 1} - {i}{pocet_mezer_za_mestem} | {ceny[mesta.index(i)]}')
 
 print(dvojita_cara)

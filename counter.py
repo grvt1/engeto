@@ -1,3 +1,5 @@
+from pprint import pprint
+
 TEXT = """
 Affronting imprudence do he he everything. Sex lasted dinner wanted indeed
 wished out law. Far advanced settling say finished raillery. Offered
@@ -124,3 +126,31 @@ heart charm disposing desire both debating oppose gentleman goodness
 sufficient barton matters limited. Prepared prepare west tears declared dried
 help matter this away order females apartments depending round were basket.
 """
+
+# split TEXT into words and strip all special characters
+cleared_words = []
+for word in TEXT.split():
+    cleared_word = word.strip('.,!?')
+    cleared_words.append(cleared_word)
+
+# pprint(cleared_words)
+
+# count occurrences for each word
+counted_words = {}
+for word in cleared_words:
+    if word not in counted_words:
+        counted_words[word] = 1
+    else:
+        counted_words[word] += 1
+
+# pprint(counted_words)
+
+# get top 5 values
+top_5_values = sorted(counted_words.values(), reverse=True)[:5]
+top_5_keys = {}
+for key in counted_words:
+    value = counted_words[key]
+    if value in top_5_values:
+        top_5_keys[key] = value
+
+pprint(top_5_keys)
