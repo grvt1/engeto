@@ -1,5 +1,11 @@
 '''
-author =
+projekt_1.py: první projekt do Engeto Online Python Akademie
+
+author: Michal Trumpich
+
+email: michal.trumpich@gmail.com
+
+discord: Michal T.#8572
 '''
 TEXTS = ['''
 Situated about 10 miles west of Kemmerer,
