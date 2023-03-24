@@ -159,11 +159,11 @@ class main:
             occurrences_text = '*'*words_length[length]
 
             # create text for nr
-            space_before_nr = space_before_len + highest_value - words_length[length] - space_before_len
+            space_before_nr = highest_value - words_length[length]
             nr_text = ' '*space_before_nr + '|' + str(words_length[length])
 
             # combine and print all
-            print(len_text, occurrences_text, nr_text)
+            print(len_text,occurrences_text,nr_text)
 
 
 main()
