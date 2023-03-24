@@ -163,7 +163,7 @@ class main:
             nr_text = ' '*space_before_nr + '|' + str(words_length[length])
 
             # combine and print all
-            print(len_text,occurrences_text,nr_text)
+            print(len_text, occurrences_text, nr_text)
 
 
 main()
