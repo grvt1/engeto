@@ -1,4 +1,4 @@
-# TODO promenne
+# DONE promenne
 sklad = {
     'mleko':    [30,  5],    # index 0 -> cena; index 1 -> mnozstvi
     'maso':     [100, 1],
