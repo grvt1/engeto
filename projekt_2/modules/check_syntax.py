@@ -7,7 +7,8 @@ from projekt_2.modules.change_str import add_s
 
 def check_all(check_this: str) -> bool:
     """
-    Goes through all the functions in this class and returns True if all of them are True and false if at least one is False
+    Goes through all the functions in this module and returns True if all of them are True and false if at least one is False
+    :return True if all the checks are True, False otherwise
     """
     checks = [
         string_is_int(check_this),
@@ -20,7 +21,7 @@ def check_all(check_this: str) -> bool:
 
 def string_is_int(check_this: str) -> bool:
     """
-    Checks whether
+    Checks whether string is numeric
      Example 1:
     :param check_this: 4567
     :return: True

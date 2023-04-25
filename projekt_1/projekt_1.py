@@ -1,9 +1,8 @@
 """
-projekt_1.py: první projekt do Engeto Online Python Akademie
+projekt_1: My first project for the Engeto Academy
+description: Program takes a text and analyzes all the chars, blank spaces and sum of all the numbers
 
 author: Michal Trumpich
-
-email: michal.trumpich@gmail.com
 
 discord: Michal T.#8572
 """

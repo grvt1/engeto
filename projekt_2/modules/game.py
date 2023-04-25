@@ -20,7 +20,7 @@ def new_game(username: str) -> None:
     # generate number and wait for user to enter any key to start the game
     generated_number = generate_number()
     input('Enter any key to start the timer: ')
-    print(generated_number)
+    # print(generated_number)
     start_time = time.time()
     no_of_guesses = 0
     while True:
@@ -85,6 +85,7 @@ def check_bulls_and_cows(user_guessed: str, generated_number: str) -> bool:
             cows += 1
             if user_guessed.index(i) == generated_number.index(i):
                 bulls += 1
+                cows -= 1
 
     print(f' - {bulls} {add_s(bulls, "bull")} / {cows} {add_s(cows, "cow")}')
     return True if bulls == 4 else False

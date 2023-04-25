@@ -144,7 +144,7 @@ def load_high_scores() -> dict:
     Loads high_scores with json and returns it as a dict
     :return: high_scores.json dict
     """
-    file_name = 'C:\\Python\\Projects\\Git\\engeto\\projekt_2\\data\\high_scores.json'
+    file_name = 'data\\high_scores.json'
     with open(file_name) as f:
         data = json.load(f)
     return data
@@ -157,7 +157,7 @@ def dump_high_scores(data: dict) -> None:
     :return: None
     """
     # dump file with jsons
-    file_name = 'C:\\Python\\Projects\\Git\\engeto\\projekt_2\\data\\high_scores.json'
+    file_name = 'data\\high_scores.json'
     with open(file_name, 'w') as f:
         json.dump(data, f, indent=2, sort_keys=True)
 

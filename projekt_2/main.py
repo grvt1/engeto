@@ -1,10 +1,9 @@
 """
 
-main.py: druhý projekt do Engeto Online Python Akademie
+main.py: My 2nd project for the Engeto Academy
+description: Playable game of Bulls and Cows with savable high score
 
 author: Michal Trumpich
-
-email: michal.trumpich@gmail.com
 
 discord: Michal T.#8572
 
