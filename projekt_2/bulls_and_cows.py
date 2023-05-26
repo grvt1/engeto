@@ -1,6 +1,6 @@
 """
 
-main.py: My 2nd project for the Engeto Academy
+bulls_and_cows.py: My 2nd project for the Engeto Academy
 description: Playable game of Bulls and Cows with savable high score
 
 author: Michal Trumpich
