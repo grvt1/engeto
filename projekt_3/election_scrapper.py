@@ -4,7 +4,7 @@ election_scrapper.py: My 3rd project for the Engeto Academy
 author: Michal Trumpich
 e-mail: michal.trumpich@gmail.com
 discord: Michal T.#8572
-"""○○
+"""
 
 import os
 
