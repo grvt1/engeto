@@ -4,7 +4,7 @@ election_scrapper.py: My 3rd project for the Engeto Academy
 author: Michal Trumpich
 e-mail: michal.trumpich@gmail.com
 discord: Michal T.#8572
-"""
+"""○○
 
 import os
 
@@ -27,7 +27,7 @@ def election_scrapper(link: str, file_name: str) -> None:
 
 
 # link for 2017 CZE election results
-scrap_this = 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=12&xnumnuts=7103'
+scrap_this = 'https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2102'
 
 # get region name which will be used in the .csv file name
 region = get_region_name(scrap_this)

@@ -22,7 +22,7 @@ def export_to_csv(file_path: str) -> None:
     """
     # try if file_path is valid. Quit otherwise.
     try:
-        with open(file_path):
+        with open(file_path, 'w'):
             pass
     except FileNotFoundError as fil_e:
         print('Wrong file name/path for exporting. Exiting program.')
@@ -40,7 +40,7 @@ def export_to_csv(file_path: str) -> None:
         header = get_header()
 
         # use DictWriter to write all rows into the file
-        with open(file_path, 'w', encoding='UTF-8', newline='') as csv_file:
+        with open(file_path, 'a', encoding='UTF-8', newline='') as csv_file:
             writer = csv.DictWriter(csv_file, fieldnames=header)
             writer.writeheader()  # first write header
             all_json_data = load_json()  # then load json_data.json and write them inside the .csv one by one
